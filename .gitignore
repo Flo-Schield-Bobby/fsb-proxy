@@ -12,7 +12,6 @@
 
 # Parameters
 /app/config/parameters.yml
-/app/config/parameters.ini
 
 # Managed by Composer
 /app/bootstrap.php.cache
@@ -29,9 +28,6 @@
 # PHPUnit
 /app/phpunit.xml
 /phpunit.xml
-
-# Build data
-/build/
 
 # Composer PHAR
 /composer.phar
