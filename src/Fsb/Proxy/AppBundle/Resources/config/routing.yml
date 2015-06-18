@@ -1,0 +1,3 @@
+fsb_proxy_app_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: FsbProxyAppBundle:Default:index }

@@ -1,0 +1,4 @@
+fsb_proxy_app:
+    resource: "@FsbProxyAppBundle/Resources/config/routing.yml"
+    prefix:   /
+

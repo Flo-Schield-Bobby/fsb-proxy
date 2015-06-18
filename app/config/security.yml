@@ -1,0 +1,46 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User:
+            algorithm:            pbkdf2
+            hash_algorithm:       sha512
+            iterations:           10000000
+            encode_as_base64:     true
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        in_memory:
+            memory:
+                users:
+                    admin:
+                        password: 34PowJ8ZoGjMLa5znLoZ8U6JdgBHpSuVBhrVCqEQ6trdt1M4YAy+HQ==
+                        roles: [ 'ROLE_ADMIN' ]
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt|error)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+
+        # fsb_media_files_index_login:
+        #     pattern:  ^/login$
+        #     security: false
+
+        # fsb_media_files_index:
+        #     pattern:  ^/
+        #     provider: fsb_media_files_index_users
+        #     anonymous: ~
+        #     form_login:
+        #         check_path: fsb_media_files_index_security_check
+        #         login_path: fsb_media_files_index_login
+        #     logout:
+        #         path:   fsb_media_files_index_logout
+        #         target: fsb_media_files_index_homepage
+
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_USER }
