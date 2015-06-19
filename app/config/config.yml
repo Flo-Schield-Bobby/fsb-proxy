@@ -35,6 +35,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        proxy_title: "%proxy_title%"
 
 # Assetic Configuration
 assetic:
@@ -78,3 +80,16 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+guzzle:
+    base_url: %proxy_base_url%
+
+    # custom headers
+    headers:
+        # Accept: "application/json"
+
+    # plugin settings
+    plugin:
+       # wsse:
+       #     username:
+       #     password:

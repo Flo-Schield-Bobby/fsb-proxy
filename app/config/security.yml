@@ -14,8 +14,11 @@ security:
         in_memory:
             memory:
                 users:
-                    admin:
+                    user:
                         password: 34PowJ8ZoGjMLa5znLoZ8U6JdgBHpSuVBhrVCqEQ6trdt1M4YAy+HQ==
+                        roles: [ 'ROLE_ADMIN' ]
+                    bobby:
+                        password: ttZJY5Dm9Oq4MhlOciIoP4nF1hgxow312Get3omxV1me/eWRqMOXyA==
                         roles: [ 'ROLE_ADMIN' ]
 
     firewalls:
@@ -23,23 +26,19 @@ security:
             pattern: ^/(_(profiler|wdt|error)|css|images|js)/
             security: false
 
-        main:
+        fsb_proxy_app_login:
+            pattern:  ^/login$
+            security: false
+
+        fsb_proxy_app:
+            pattern:  ^/
             anonymous: ~
-
-        # fsb_media_files_index_login:
-        #     pattern:  ^/login$
-        #     security: false
-
-        # fsb_media_files_index:
-        #     pattern:  ^/
-        #     provider: fsb_media_files_index_users
-        #     anonymous: ~
-        #     form_login:
-        #         check_path: fsb_media_files_index_security_check
-        #         login_path: fsb_media_files_index_login
-        #     logout:
-        #         path:   fsb_media_files_index_logout
-        #         target: fsb_media_files_index_homepage
+            form_login:
+                check_path: fsb_proxy_app_login_check_page
+                login_path: fsb_proxy_app_login_page
+            logout:
+                path:   fsb_proxy_app_logout_page
+                target: fsb_proxy_app_proxy_page
 
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
