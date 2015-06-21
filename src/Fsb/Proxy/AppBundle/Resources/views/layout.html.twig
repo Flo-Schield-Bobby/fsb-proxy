@@ -5,11 +5,14 @@
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 		<title>{{ proxy_title }}</title>
 		{% block stylesheets %}
-			{# {% stylesheets
-				'bundles/fsbproxyapp/css/app.min.css'
+			{% stylesheets
+                'bundles/fsbproxyapp/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss'
+                'bundles/fsbproxyapp/bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css'
+                'bundles/fsbproxyapp/bower_components/bootstrap-material-design/dist/css/ripples.min.css'
+                'bundles/fsbproxyapp/bower_components/bootstrap-material-design/dist/css/roboto.min.css'
 				output='css/app.min.css' %}
 				<link rel='stylesheet' href='{{ asset_url }}' />
-			{% endstylesheets %} #}
+			{% endstylesheets %}
 		{% endblock %}
 		<link rel='apple-touch-icon' sizes='57x57' href='{{ asset('apple-touch-icon-57x57.png') }}' />
 		<link rel='apple-touch-icon' sizes='60x60' href='{{ asset('apple-touch-icon-60x60.png') }}' />
@@ -45,12 +48,16 @@
 			{% block app_footer %}{% endblock %}
 		{% endblock %}
 		{% block javascripts %}
-			{# {% javascripts
+			{% javascripts
+                'bundles/fsbproxyapp/bower_components/jquery/dist/jquery.min.js'
+                'bundles/fsbproxyapp/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'
+                'bundles/fsbproxyapp/bower_components/bootstrap-material-design/dist/js/material.min.js'
+                'bundles/fsbproxyapp/bower_components/bootstrap-material-design/dist/js/ripples.min.js'
 				'bundles/fsbproxyapp/js/app.js'
 				filter='?uglifyjs2'
 				output='js/app.min.js' %}
 				<script src='{{ asset_url }}'></script>
-			{% endjavascripts %} #}
+			{% endjavascripts %}
 		{% endblock %}
 	</body>
 </html>
