@@ -23,7 +23,6 @@ class RestController extends Controller
 		), $request->getContent());
 
 		$promise = $client->sendAsync($proxyRequest)->then(function ($proxyResponse) use ($client, $proxyRequest, $response) {
-
 			$response->setStatusCode($proxyResponse->getStatusCode());
 			$response->headers->replace($proxyResponse->getHeaders());
 
