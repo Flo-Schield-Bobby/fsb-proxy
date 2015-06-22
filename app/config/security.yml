@@ -14,7 +14,7 @@ security:
         in_memory:
             memory:
                 users:
-                    user:
+                    guest:
                         password: MGbSREk1CGtz+hia9ztTzDbkbbB11a5Sk3HFC630jcvnh8IlgNlnMw==
                         roles: [ 'ROLE_USER' ]
                     bobby:
