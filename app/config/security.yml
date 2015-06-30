@@ -38,7 +38,7 @@ security:
                 login_path: fsb_proxy_app_login_page
             logout:
                 path:   fsb_proxy_app_logout_page
-                target: fsb_proxy_app_proxy_page
+                target: /
 
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
