@@ -23,7 +23,7 @@ security:
 
     firewalls:
         dev:
-            pattern: ^/(_(profiler|wdt|error)|css|images|js)/
+            pattern: ^/(_(profiler|wdt|error)|css|images|fonts|js)/
             security: false
 
         fsb_proxy_app_login:

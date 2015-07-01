@@ -12,6 +12,7 @@ class AuthenticationController extends Controller
 
         return $this->render('FsbProxyAppBundle:Security:login.html.twig', array(
             'last_username' => $authenticationUtils->getLastUsername(),
+            'last_password' => '',
             'error'         => $authenticationUtils->getLastAuthenticationError(),
         ));
     }
