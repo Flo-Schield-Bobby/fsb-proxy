@@ -21,3 +21,6 @@ parameters:
     # Proxy base URL
     proxy_base_url: ~
     proxy_title: ~
+
+    # Users file
+    users_provider_file_path: %kernel.root_dir%/config/users.yml
