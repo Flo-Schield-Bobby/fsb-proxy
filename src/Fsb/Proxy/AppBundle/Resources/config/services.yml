@@ -1,7 +1,11 @@
+parameters:
+    fsb_proxy_app.provider.yaml_user_provider.class: Fsb\Proxy\AppBundle\Provider\YamlUserProvider
+
 services:
-#    fsb_proxy_app.example:
-#        class: Fsb\Proxy\AppBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    fsb_proxy_app.provider.yaml_user_provider:
+        class: %fsb_proxy_app.provider.yaml_user_provider.class%
+        arguments: [%users_provider_file_path%]
+
     http.client:
         alias: guzzle.client
 
