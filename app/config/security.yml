@@ -1,6 +1,6 @@
 security:
     encoders:
-        Fsb\Proxy\AppBundle\Core\User:
+        Fsb\Proxy\AppBundle\Model\User:
             algorithm:            pbkdf2
             hash_algorithm:       sha512
             iterations:           1000000

@@ -14,7 +14,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Yaml\Dumper as YamlDumper;
 
-use Fsb\Proxy\AppBundle\Core\User;
+use Fsb\Proxy\AppBundle\Model\User;
 
 class CreateUserCommand extends ContainerAwareCommand
 {

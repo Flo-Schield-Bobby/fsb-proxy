@@ -11,7 +11,7 @@ use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Yaml\Parser as YamlParser;
 use Symfony\Component\Filesystem\Filesystem;
 
-use Fsb\Proxy\AppBundle\Core\User;
+use Fsb\Proxy\AppBundle\Model\User;
 
 class YamlUserProvider implements UserProviderInterface
 {
@@ -66,6 +66,6 @@ class YamlUserProvider implements UserProviderInterface
 
 	public function supportsClass($class)
 	{
-		return ('Fsb\Proxy\AppBundle\Core\User' === $class) || (is_subclass_of($class, 'Fsb\Proxy\AppBundle\Core\User'));
+		return ('Fsb\Proxy\AppBundle\Model\User' === $class) || (is_subclass_of($class, 'Fsb\Proxy\AppBundle\Model\User'));
 	}
 }

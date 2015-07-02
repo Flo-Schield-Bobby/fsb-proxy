@@ -1,6 +1,6 @@
 <?php
 
-namespace Fsb\Proxy\AppBundle\Core;
+namespace Fsb\Proxy\AppBundle\Model;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
