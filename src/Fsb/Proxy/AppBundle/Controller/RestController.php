@@ -13,12 +13,6 @@ class RestController extends Controller
 		$response = new Response();
 
 		$client = $this->get('http.client');
-		$session = $request->getSession();
-		$headers = array();
-
-		if ($session->has('X-Transmission-Session-Id')) {
-			$headers['X-Transmission-Session-Id'] = $session->get('X-Transmission-Session-Id');
-		}
 
 		$proxyResponse = $client->request($request->getMethod(), $uri, array(
 			'allow_redirects' => false,
@@ -39,12 +33,6 @@ class RestController extends Controller
 				}
 
 				return $this->redirectToRoute('fsb_proxy_app_proxy_page', array('uri' => $location));
-			} else if ($proxyResponse->getStatusCode() === 409) {
-				$transmissionSessionId = $proxyResponse->getHeader('X-Transmission-Session-Id');
-
-				if ($transmissionSessionId) {
-					$session->set('X-Transmission-Session-Id', $transmissionSessionId);
-				}
 			}
 		}
 
