@@ -18,9 +18,9 @@ parameters:
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    # Proxy base URL
-    proxy_base_url: ~
-    proxy_title: ~
+    # Proxy Configuration
+    proxy_base_url: http://example.com/
+    proxy_title: Proxy
 
     # Users file
     users_provider_file_path: %kernel.root_dir%/config/users.yml

@@ -42,7 +42,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ FsbProxyAppBundle ]
+    bundles:        [ FsbProxyBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -86,12 +86,5 @@ swiftmailer:
 guzzle:
     base_url: %proxy_base_url%
 
-    # custom headers
-    headers:
-        # Accept: "application/json"
-
-    # plugin settings
-    plugin:
-       # wsse:
-       #     username:
-       #     password:
+fsb_proxy:
+    users_provider_file_path: %users_provider_file_path%

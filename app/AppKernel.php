@@ -17,7 +17,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new EightPoints\Bundle\GuzzleBundle\GuzzleBundle(),
-            new Fsb\Proxy\AppBundle\FsbProxyAppBundle(),
+            new Fsb\Bundle\ProxyBundle\FsbProxyBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
