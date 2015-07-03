@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b52480e1ae1c24e68611c4a6352b2536",
+    "hash": "d9671637e9879100a900865cf4cdd05d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -810,6 +810,57 @@
                 "wsse"
             ],
             "time": "2015-06-14 16:14:17"
+        },
+        {
+            "name": "fsb/proxy-bundle",
+            "version": "v0.1.0",
+            "target-dir": "Fsb/Bundle/ProxyBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Flo-Schield-Bobby/FsbProxyBundle.git",
+                "reference": "90e3e7f2715e0ec74b27bd1b4b76b26927ee52f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Flo-Schield-Bobby/FsbProxyBundle/zipball/90e3e7f2715e0ec74b27bd1b4b76b26927ee52f4",
+                "reference": "90e3e7f2715e0ec74b27bd1b4b76b26927ee52f4",
+                "shasum": ""
+            },
+            "require": {
+                "eightpoints/guzzle-bundle": "~3.0",
+                "symfony/symfony": "~2.7"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Fsb\\Bundle\\ProxyBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Schildknecht",
+                    "email": "florent.schildknecht@gmail.com",
+                    "homepage": "http://floschild.me"
+                }
+            ],
+            "description": "Authenticated symfony bundle: provides an authentication layer on top of a PHP proxy.",
+            "homepage": "https://github.com/Flo-Schield-Bobby/FsbProxyBundle",
+            "keywords": [
+                "Authentication",
+                "bundle",
+                "client",
+                "curl",
+                "http client",
+                "proxy",
+                "rest",
+                "security",
+                "symfony"
+            ],
+            "time": "2015-07-03 11:27:59"
         },
         {
             "name": "guzzlehttp/guzzle",
