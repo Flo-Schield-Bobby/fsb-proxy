@@ -1,7 +1,7 @@
 # Fsb ProxyBundle App
 This project is an example of a symfony application using [FsbProxyBundle][1]
 
-Check the application configuration :
+Check the application settings :
 
  - Global configuration [app/config/config.yml](app/config/config.yml)
  - Global routing [app/config/routing.yml](app/config/routing.yml)
