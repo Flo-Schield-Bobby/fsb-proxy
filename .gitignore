@@ -30,6 +30,7 @@
 /web/js/
 /web/css/
 /web/images/
+/web/.htaccess
 
 # PHPUnit
 /app/phpunit.xml
